@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { gradient } from "@/components/Gradient";
 import { useEffect } from "react";
+import Image from "next/image";
 
 export default function Home() {
   useEffect(() => {
@@ -198,7 +198,7 @@ die Welt zu helfen
             </motion.div>
           </div>
         </main>
-        <motion.div
+        <motion.img
           initial={{
             filter: "blur(20px)",
           }}
@@ -215,9 +215,9 @@ die Welt zu helfen
           }}
           id="gradient-canvas"
           className="z-50 fixed top-0 right-[-2px] w-[80%] md:w-1/2 h-screen bg-[#c3e4ff]"
+          src="./solar.jpg"
         >
-          <img src="./solar.jpg" className="w-full h-full object-cover" style={{zIndex: 9999}}/>
-        </motion.div>
+        </motion.img>
         <div className="h-[60px] bg-[#1D2B3A] fixed bottom-0 z-20 w-full flex flex-row items-center justify-evenly" style={{zIndex: 9999}}>
           <p className="text-white/80 text-base md:text-lg font-semibold md:leading-[60px] whitespace-nowrap flex flex-row">
           © BM Elektrobau GmbH 2023
