@@ -4,11 +4,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import { gradient } from "@/components/Gradient";
 import { useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   useEffect(() => {
     gradient.initGradient("#gradient-canvas");
   }, []);
+
+  const router = useRouter();
 
   return (
     <AnimatePresence>
@@ -43,7 +46,7 @@ export default function Home() {
           >
           </motion.img>
 
-          <motion.h3
+          <motion.h5
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -57,7 +60,7 @@ export default function Home() {
             
 Helfen Sie uns <br />
 die Welt zu helfen
-          </motion.h3>
+          </motion.h5>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -172,7 +175,9 @@ die Welt zu helfen
                   cursor: 'pointer'
                 }}
               >
-                <span className="mr-2"> Dienstleistungen </span>
+                <span className="mr-2" onClick={()=>{
+                  router.push('/projects');
+                }}> Dienstleistungen</span>
                 <svg
                   className="w-5 h-5"
                   viewBox="0 0 24 24"
