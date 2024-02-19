@@ -68,9 +68,9 @@ const Projects = () => {
                 style={{
                     display: 'flex',
                     flexWrap: 'wrap',
-                    padding: '30px',
+                    padding: '7px',
                     background: 'rgba(0, 0, 0, 0.9)',
-                    gap: '20px'
+                    gap: '7px'
                 }}
             >
                 {photosIndexes.map((photoNumber)=>{
