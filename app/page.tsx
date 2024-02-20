@@ -15,7 +15,10 @@ export default function Home() {
 
   return (
     <AnimatePresence>
-      <div className="min-h-[100vh] sm:min-h-screen w-screen flex flex-col relative bg-[#F2F3F5] font-inter overflow-hidden">
+      <div style={{
+        overflowX: 'hidden',
+        overflowY: 'auto'
+      }} className="min-h-[100vh] sm:min-h-screen w-screen flex flex-col relative bg-[#F2F3F5] font-inter">
         <svg
           style={{ filter: "contrast(125%) brightness(110%)" }}
           className="fixed z-[1] w-full h-full opacity-[35%]"
@@ -31,7 +34,10 @@ export default function Home() {
           </filter>
           <rect width="100%" height="100%" filter="url(#noise)"></rect>
         </svg>
-        <main className="flex flex-col justify-center h-[90%] static md:fixed w-screen overflow-hidden grid-rows-[1fr_repeat(3,auto)_1fr] z-[100] pt-[30px] pb-[120px] px-4 md:px-20 md:py-0">
+        <main style={{
+          overflowX: 'hidden',
+          overflowY: 'auto'
+        }} className="flex flex-col justify-center h-[90%] static md:fixed w-screen grid-rows-[1fr_repeat(3,auto)_1fr] z-[100] pt-[30px] pb-[120px] px-4 md:px-20 md:py-0">
           <motion.img
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -202,6 +208,31 @@ die Welt zu helfen
               </div>
             </motion.div>
           </div>
+          <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.55,
+            duration: 0.55,
+            ease: [0.075, 0.82, 0.965, 1],
+          }}
+          style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '10px',
+              marginTop: '50px',
+              padding: '20px',
+              width: '350px',
+              background: 'darkslategrey',
+              color: 'whitesmoke',
+              borderRadius: '20px',
+              boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.5)',
+              marginBottom: '25px',
+              marginLeft: '10px'
+            }}>
+              <h3 style={{fontSize: 'unset !important,'}}>Betriebsleiter: <span style={{fontWeight: 'bold'}}>Memmi Mohamed Amine</span></h3>
+              <h5 style={{fontStyle: 'italic'}}>Ingenieur für Elektrotechnik</h5>
+            </motion.div>
         </main>
         <motion.img
           initial={{
